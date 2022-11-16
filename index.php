@@ -22,18 +22,22 @@
       <a href="#"><li>-----</li></a>
       <a href="#"><li>-----</li></a>
       <a href="#"><li>-----</li></a>
+	  
 	  <div id="outer">
   		<div class="inner">
 		  <button type="submit"><i class="fa fa-file-text-o"></i> Print</button>
 	  </div>
 	  <div class="inner">
-		  <button type="submit"><i class="fa fa-file-text-o"></i> Devis</button>
+	  <form action="https://formspree.io/f/mwkzywdl" method="POST"><br>
+                <input type="email" name="_replyto" placeholder="Email"><br>
+                <button type="submit">Devis</button>
+            </form>
 	  </div>
 	  </div>
     </ul>
   </div>
 </nav>
-
+</html>
 <?php
 	session_start();
 	
@@ -69,4 +73,3 @@
     var_dump($formations);
 
 ?>
-</html>

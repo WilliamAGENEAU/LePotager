@@ -38,7 +38,7 @@
    user-select: none;
  }
  
- #menuToggle input
+ #menuToggle input[type=checkbox]
  {
    display: block;
    width: 40px;
@@ -153,17 +153,31 @@
 button {
 	padding:10px 25px; 
 	background:#121522; 
-	border:0 none;
+    color: #fff;
 	cursor:pointer;
-	-webkit-border-radius: 5px;
 	border-radius: 5px;
     border:5px #121522;
-	color: #fff;
+	
 }
 button:hover {
-    background: #fff;
+    background-color: #fff;
     filter: brightness(95%);
     color: #121522;
     transition: 0.2s;
     border: 5px #121522;
+}
+input[type=email] {
+    width: 300px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    opacity: 1;
+}
+form {
+    margin-left: -15px;
+    margin-top: -25px;
+
 }
