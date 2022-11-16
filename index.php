@@ -19,11 +19,17 @@
     <span></span>
     <span></span>
     <ul id="menu">
-      <a href="#"><li>Home</li></a>
-      <a href="#"><li>About</li></a>
-      <a href="#"><li>Info</li></a>
-      <a href="#"><li>Contact</li></a>
-      <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>
+      <a href="#"><li>-----</li></a>
+      <a href="#"><li>-----</li></a>
+      <a href="#"><li>-----</li></a>
+	  <div id="outer">
+  		<div class="inner">
+		  <button type="submit"><i class="fa fa-file-text-o"></i> Print</button>
+	  </div>
+	  <div class="inner">
+		  <button type="submit"><i class="fa fa-file-text-o"></i> Devis</button>
+	  </div>
+	  </div>
     </ul>
   </div>
 </nav>

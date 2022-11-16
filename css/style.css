@@ -137,3 +137,33 @@
      transition: opacity 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
    }
  }
+ #outer
+{
+    width:100%;
+    text-align: center;
+    margin-left: -20px;
+    margin-top: 15px;
+}
+.inner
+{
+    display: inline-block;
+    margin: 2vh;
+}
+
+button {
+	padding:10px 25px; 
+	background:#121522; 
+	border:0 none;
+	cursor:pointer;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+    border:5px #121522;
+	color: #fff;
+}
+button:hover {
+    background: #fff;
+    filter: brightness(95%);
+    color: #121522;
+    transition: 0.2s;
+    border: 5px #121522;
+}
