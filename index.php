@@ -1,3 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>D4G grp 14</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="D4G">
+    <link rel="icon"  href="images" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="main.js"></script>
+</head>
+
+<nav role='navigation'>
+  <div id="menuToggle">
+    <input type="checkbox" />
+    <span></span>
+    <span></span>
+    <span></span>
+    <ul id="menu">
+      <a href="#"><li>Home</li></a>
+      <a href="#"><li>About</li></a>
+      <a href="#"><li>Info</li></a>
+      <a href="#"><li>Contact</li></a>
+      <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>
+    </ul>
+  </div>
+</nav>
+
 <?php
 	session_start();
 	
@@ -33,3 +63,4 @@
     var_dump($formations);
 
 ?>
+</html>
