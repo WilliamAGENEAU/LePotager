@@ -19,13 +19,14 @@
     <span></span>
     <span></span>
     <ul id="menu">
-      <a href="#"><li>-----</li></a>
-      <a href="#"><li>-----</li></a>
-      <a href="#"><li>-----</li></a>
-	  
+		<div id="panier">
+    		<li>-----</li>
+      		<li>-----</li>
+      		<li>-----</li>
+		</div>
 	  <div id="outer">
   		<div class="inner">
-		  <button type="submit"><i class="fa fa-file-text-o"></i> Print</button>
+		  <button type="submit" onclick="printDiv()"><i class="fa fa-file-text-o"></i> Print</button>
 	  </div>
 	  <div class="inner">
 	  <form action="https://formspree.io/f/mwkzywdl" method="POST"><br>
@@ -37,7 +38,4 @@
     </ul>
   </div>
 </nav>
-<body>
-	<h1>Formation Green IT / Eco-Design / Eco-Conception</h1>
-</body>
 </html>
