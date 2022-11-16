@@ -44,7 +44,7 @@
 	// So we include PHPExcel to perform the reading
 	require_once dirname(__FILE__, 2) . "/LePotager/utils/lib/PHPExcel-1.8/Classes/PHPExcel.php";
 
-	$ods_file = dirname(__FILE__, 2) . '/LePotager/utils/Fichier csv.ods';
+	$ods_file = dirname(__FILE__, 2) . '/LePotager/utils/Fichier_csv.ods';
 
 	$excelReader = PHPExcel_IOFactory::createReaderForFile($ods_file);
 	$excelObj = $excelReader->load($ods_file);
