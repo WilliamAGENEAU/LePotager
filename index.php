@@ -38,4 +38,7 @@
     </ul>
   </div>
 </nav>
+<body>
+	<h1>Formation Green IT / Eco-Design / Eco-Conception</h1>
+</body>
 </html>
