@@ -180,8 +180,13 @@ form {
 
 }
 #carte {
-  
+  margin-left: 10%;
 }
 .titre{
     margin-left: 30%;
+}
+h1{
+  font-family: system-ui;
+  color: white;
+  text-align: center;
 }
