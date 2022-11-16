@@ -181,6 +181,13 @@ form {
     margin-top: -25px;
 
 }
+<<<<<<< HEAD
 #carte {
   margin-left: 400px;
+=======
+h1 {
+  font-family: system-ui;
+  color: white;
+  text-align: center;
+>>>>>>> c58fa04d71e1297f831f82c9bfee8642d07fad53
 }
