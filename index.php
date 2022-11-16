@@ -10,6 +10,8 @@
     <meta name="description" content="D4G">
     <link rel="stylesheet" href="css/style.css">
     <script src="main.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"></script>
 </head>
 
 <nav role='navigation'>
@@ -39,12 +41,9 @@
   </div>
 </nav>
 <body>
-	<div class="titre">
-	<img src="images\DESIGN4GREEN_logo_vecto_Blanc.png" width="40%" weight="40%">
-	</div>
-	<div id='carte'>
-		<iframe src="https://api.jawg.io/maps/c111bdcc-60ac-4d6b-9713-81ca5d705f0e/b0b3057a-7554-4d39-b93a-af8b7a11184f.html?access-token=mSx8rWaBLl4TKFIAND6r9V8or0NfCPwyPr5QgPVCt4lLcHCAmxzZbawvhGuq9yMD" width="1200px" height="800px"></iframe>
-	</div>
+	<a href="http://jawg.io" title="Tiles Courtesy of Jawg Maps" target="_blank" class="jawg-attrib" >&copy; <b>Jawg</b>Maps</a> | <a href="https://www.openstreetmap.org/copyright" title="OpenStreetMap is open data licensed under ODbL" target="_blank" class="osm-attrib" >&copy; OSM contributors</a>
+	<div id='map'></div>
+	<iframe src="https://api.jawg.io/maps/c111bdcc-60ac-4d6b-9713-81ca5d705f0e/b0b3057a-7554-4d39-b93a-af8b7a11184f.html?access-token=mSx8rWaBLl4TKFIAND6r9V8or0NfCPwyPr5QgPVCt4lLcHCAmxzZbawvhGuq9yMD" width="500px" height="300px"></iframe>
 </body>
 <script>
     function printDiv() {
