@@ -19,13 +19,14 @@
     <span></span>
     <span></span>
     <ul id="menu">
-      <a href="#"><li>-----</li></a>
-      <a href="#"><li>-----</li></a>
-      <a href="#"><li>-----</li></a>
-	  
+		<div id="panier">
+    		<li>-----</li>
+      		<li>-----</li>
+      		<li>-----</li>
+		</div>
 	  <div id="outer">
   		<div class="inner">
-		  <button type="submit"><i class="fa fa-file-text-o"></i> Print</button>
+		  <button type="submit" onclick="printDiv()"><i class="fa fa-file-text-o"></i> Print</button>
 	  </div>
 	  <div class="inner">
 	  <form action="https://formspree.io/f/mwkzywdl" method="POST"><br>
@@ -37,4 +38,19 @@
     </ul>
   </div>
 </nav>
+<script>
+    function printDiv() {
+        var divContents = document.getElementById("panier").innerHTML;
+        var a = window.open('', '', 'height=800, width=800');
+        a.document.write('<html>');
+        a.document.write(
+            '<head><link rel="stylesheet" href="./../css/style.css" type="text/css"><link rel="stylesheet" href="./../utils/lib/bootstrap.min.css" /></head>'
+        );
+        a.document.write('<body>');
+        a.document.write(divContents);
+        a.document.write('</body></html>');
+        a.document.close();
+        a.print();
+    }
+</script>
 </html>
