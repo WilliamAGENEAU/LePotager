@@ -13,11 +13,14 @@
             <thead>
                 <tr>
                     <th> Formation Continue / initiale : </th>
-                    <th> Vous êtes une structure ... : </th>
+                    <th> Type d'organisme : </th>
                     
-                    <th> Courte description du programme / Contenu : </th>
+                    <th> Nom de l'organisme : </th>
                    
+                    <th> Intitulé de la formation : </th>
                     <th> Localisation de la structure (ville) : </th>
+                    <th> Durée de la formation / intervention (en j) : </th>
+                    <th> Modalités d’accès à la formation (présentiel / distanciel / hybride) : </th>
                     
                 </tr>
             </thead>
