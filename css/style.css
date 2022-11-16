@@ -1,17 +1,15 @@
-
- body
- {
-   margin-left: 100;
-   padding: 0;
-   
-   
-   background: #232323;
-   color: #cdcdcd;
-   font-family: "Avenir Next", "Avenir", sans-serif;
-   
-   overflow-x: hidden; 
- }
- 
+body
+{
+  margin: 0;
+  padding: 0;
+  
+  
+  background: #232323;
+  color: #cdcdcd;
+  font-family: "Avenir Next", "Avenir", sans-serif;
+  
+  overflow-x: hidden; 
+}
  a
  {
    text-decoration: none;
@@ -182,5 +180,5 @@ form {
 
 }
 #carte {
-  margin-left: 400px;
+  
 }

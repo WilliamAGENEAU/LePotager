@@ -12,36 +12,34 @@
     <script src="main.js"></script>
 </head>
 
-<nav role='navigation'>
-  <div id="menuToggle">
-    <input type="checkbox" />
-    <span></span>
-    <span></span>
-    <span></span>
-    <ul id="menu">
-		<div id="panier">
-    		<li>-----</li>
-      		<li>-----</li>
-      		<li>-----</li>
-		</div>
-	  <div id="outer">
-  		<div class="inner">
-		  <button type="submit" onclick="printDiv()"><i class="fa fa-file-text-o"></i> Print</button>
-	  </div>
-	  <div class="inner">
-	  <form action="https://formspree.io/f/mwkzywdl" method="POST"><br>
-                <input type="email" name="_replyto" placeholder="Email"><br>
-                <button type="submit">Devis</button>
-            </form>
-	  </div>
-	  </div>
-    </ul>
-  </div>
-</nav>
 <body>
-	<div id='carte'>
-		<iframe src="https://api.jawg.io/maps/c111bdcc-60ac-4d6b-9713-81ca5d705f0e/b0b3057a-7554-4d39-b93a-af8b7a11184f.html?access-token=mSx8rWaBLl4TKFIAND6r9V8or0NfCPwyPr5QgPVCt4lLcHCAmxzZbawvhGuq9yMD" width="1200px" height="800px"></iframe>
-	</div>
+	<nav role='navigation'>
+		<div id="menuToggle">
+			<input type="checkbox" />
+			<span></span>
+			<span></span>
+			<span></span>
+			<ul id="menu">
+				<div id="panier">
+					<li>-----</li>
+					<li>-----</li>
+					<li>-----</li>
+				</div>
+				<div id="outer">
+					<div class="inner">
+						<button type="submit" onclick="printDiv()"><i class="fa fa-file-text-o"></i> Print</button>
+					</div>
+					<div class="inner">
+						<form action="https://formspree.io/f/mwkzywdl" method="POST"><br>
+							<input type="email" name="_replyto" placeholder="Email"><br>
+							<button type="submit">Devis</button>
+						</form>
+					</div>
+				</div>
+			</ul>
+		</div>
+	</nav>
+	<iframe src="https://api.jawg.io/maps/c111bdcc-60ac-4d6b-9713-81ca5d705f0e/b0b3057a-7554-4d39-b93a-af8b7a11184f.html?access-token=mSx8rWaBLl4TKFIAND6r9V8or0NfCPwyPr5QgPVCt4lLcHCAmxzZbawvhGuq9yMD" width="100%" height="700%"></iframe>
 </body>
 <script>
     function printDiv() {
