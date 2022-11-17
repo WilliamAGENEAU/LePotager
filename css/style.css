@@ -237,7 +237,9 @@ td{
   
  }
 
-#map { height: 600px; }
+#map { height: 600px; 
+  z-index: -1;
+}
 
 
 /* demo styles */
