@@ -12,6 +12,10 @@ function init() {
     })
 }
 
+var panier = [];
+
+var myjson = [];
+
 function printDiv() {
     var divContents = document.getElementById("panier").innerHTML;
     var a = window.open('', '', 'height=800, width=800');
@@ -30,11 +34,27 @@ function printDiv() {
 
 function addPanier(r){
     if(panier.length<3){
-        panier.push(json[r]);
+        panier.push(myjson[r]);
     }
     console.log(panier);
 }
 
-var panier = [];
 
-var myjson = [];
+
+fetch("utils/data.geojson")
+                .then(response => response.json())
+                .then(data =>{
+                    let text = "<table cellpadding='0' cellspacing='0' border='0'>"
+                    text += "<tbody>";
+                    for(var r=0;r<data.features.length;r++)
+                        {
+                            text += "<tr><td>" + data.features[r].properties["Formation_Continue_initiale"] + "</td><td>" 
+                            + data.features[r].properties["Type_organisme"] + "</td><td>"+ data.features[r].properties["NOM_de_l'organisme"] + "</td><td>"+ data.features[r].properties["Intitule_de_la_formation"] + 
+                            "</td><td>"+ data.features[r].properties["Localisation_de_la_structure"] + "</td><td>"+ data.features[r].properties["Duree_de_la_formation"] +
+                            "</td><td>"+ data.features[r].properties["Modalites"] + "</td><td><button onclick='addPanier("+r+")'>Ajouter au panier</button></td></tr>"; 
+                            myjson.push(data.features[r].properties);
+                        }
+                        text += "</tbody>"
+                        text += "</table>"
+                        document.getElementById("data-output").innerHTML = text;
+                })
