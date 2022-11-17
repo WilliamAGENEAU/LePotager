@@ -39,6 +39,7 @@
   </div>
 </nav>
 <body>
+
 	<div class="titre">
 	<img src="images\DESIGN4GREEN_logo_vecto_Blanc.png" width="40%" weight="40%">
 	</div>
@@ -64,6 +65,7 @@
                             <th> Localisation de la structure (ville) : </th>
                             <th> Durée de la formation / intervention (en j) : </th>
                             <th> Modalités d’accès à la formation (présentiel / distanciel / hybride) : </th>
+                            <th></th>
                             
                         </tr>
                     </thead>
@@ -83,18 +85,12 @@
                                 <td><?php echo $data['features'][$i]['properties']["Localisation_de_la_structure"]; ?> </td>
                                 <td><?php echo $data['features'][$i]['properties']["Duree_de_la_formation"]; ?> </td>
                                 <td><?php echo $data['features'][$i]['properties']["Modalites"]; ?> </td>
+                                <td><button onclick=''>Ajouter au Panier</button></td>
                             </tr>
                             <?php
                             }
                             ?>
                     </tbody>
-
-                    
-                    <!--<tbody id='data-output'>
-
-
-
-                    </tbody>-->
 
 
                 </table>
@@ -115,6 +111,10 @@
         a.document.write('</body></html>');
         a.document.close();
         a.print();
+    }
+
+    function addPanier(){
+
     }
 </script>
 </html>
