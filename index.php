@@ -39,7 +39,10 @@
   </div>
 </nav>
 <body>
+    <?php
+    $panier = array();
 
+    ?>
 	<div class="titre">
 	<img src="images\DESIGN4GREEN_logo_vecto_Blanc.png" width="40%" weight="40%">
 	</div>
