@@ -1459,68 +1459,44 @@
 </script>
 </head>
 <nav role='navigation'>
-  <div id="menuToggle">
-    <input type="checkbox" />
-    <span></span>
-    <span></span>
-    <span></span>
-    <ul id="menu">
-		<div id="panier">
-    		<li>-----</li>
-      		<li>-----</li>
-      		<li>-----</li>
-		</div>
-	  <div id="outer">
-  		<div class="inner">
-		  <button type="submit" onclick="printDiv()"><i ></i> Print</button>
-	  </div>
-	  <div class="inner">
-	  <form action="https://formspree.io/f/mwkzywdl" method="POST"><br>
-                <input type="email" name="_replyto" placeholder="Email"><br>
-                <button type="submit">Devis</button>
-            </form>
-	  </div>
-	  </div>
-    </ul>
-  </div>
+  
+
 </nav>
 <body onload="init()">
-    <?php
-    $panier = array();
-    $panier = array_fill(0, 3, null);
-    var_dump($panier);
-    ?>
 <script src="main.js"></script>
 	<div class="titre">
-	<img src="images\DESIGN4GREEN_logo_vecto_Blanc.png" width="40%" weight="40%">
+	<img src="images\DESIGN4GREEN_logo_vecto_Blanc.png" width="40%" weight="40%" alt="D4G_logo">
 	</div>
 	<h1> Formations Green IT / Eco-Design / Eco-Conception</h1>
 
-	
+
 	<div id="map"></div>
 
+	<div>
+	<span id="codes"></span>
+	</div>
     </section>
-
-	
 	<section id="liste">
-	<div id='findbox'></div>
+
 	<input type="text" id="myInput" onkeyup="recherche()" placeholder="Recherche formations ..." title="Rechercher">
-	<!--<input type="text" onkeyup="search(event)" placeholder="Enter Search Key Here" />-->
 
 	<section>
-            
+            <?php
+                $data = file_get_contents("utils/data.geojson");  
+                $data = json_decode($data, true);
+            ?>
             <div class="tbl-header">
                 <table cellpadding="0" cellspacing="0" border="0" >
                     <thead>
                         <tr>
                             <th> Formation Continue / initiale : </th>
                             <th> Type d'organisme : </th>
-                            
-                                <th> Intitulé de la formation : </th>
-                                <th> Localisation de la structure (ville) : </th>
-                                <th> Durée de la formation / intervention (en j) : </th>
-                                <th> Modalités d’accès à la formation (présentiel / distanciel / hybride) : </th>
-                                <th></th>
+                            <th> Nom d'organisme : </th>
+                            <th> Intitulé de la formation : </th>
+                            <th> Localisation de la structure (ville) : </th>
+                            <th> Durée de la formation / intervention (en j) : </th>
+                            <th> Modalités d’accès à la formation (présentiel / distanciel / hybride) : </th>
+                            <th> Ajout Panier : </th>
                                 
                             </tr>
                         </thead>
@@ -1591,5 +1567,4 @@
 
 
 </body>
-
 </html>
