@@ -11,11 +11,19 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
      integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
-     crossorigin=""/>
+     crossorigin=""
+	/>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+	<link rel="stylesheet" href="leaflet-search2.css" />
+	
+	
+
     <script src="main.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
      integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
      crossorigin=""></script>
+	<script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>	
+	<script src="leaflet-search.js"></script>
     <script>var json = [
  {
   "Formation_Continue_initiale": "Formation Continue",
@@ -82,6 +90,7 @@
   "Vous_êtes_une_structure": "MOOC",
   "Courte_description_du_programme_Contenu": "il est fréquent d’entendre dire que le numérique est “green”, c’est-à-dire qu’il n’a pas ou que peu d’impact écologique, voire qu’il réduit les impacts écologiques du reste de notre économie. Dans ce cours, nous allons remettre en question ces deux idées. En effet, le numérique a au contraire des impacts écologiques réels et croissants : émissions de gaz à effet de serre, pollutions, production de déchets toxiques, etc. De plus, sa capacité à réduire les impacts écologiques du reste de notre économie est sujette à caution (effet rebond, obsolescence programmée, etc.).nnGrâce à des exemples concrets et des cas pratiques, ce cours vous permettra d’avoir un aperçu des enjeux et des moyens disponibles pour rendre le numérique plus écologique. Suivre ce cours vous permettra de vous outiller pour être acteur d’un numérique plus écologique. Vous serez en capacité de réduire l’impact écologique d’un SI, celui d’un site web et de vous impliquer dans l’écoconception d’un service numérique.nnVous souhaitez déployer des actions Green IT dans votre entreprise ? Alors rejoignez-moi dans le premier chapitre !",
   "Type_organisme": "OpenClasse room",
+  "NOM": "Non fourni", 
   "Intitule_de_la_formation": "Appliquez les principes du GreenIT dans votre entreprise",
   "Localisation_de_la_structure": "National",
   "Cette formation donne t-elle lieu à une validation des acquis ? Si oui, lesquels ?": "non",
@@ -229,6 +238,7 @@
   "Vous_êtes_une_structure": "Privée (établissement de formation, entreprise, etc.)",
   "Courte_description_du_programme_Contenu": "Objectifs :nComprendre le contexte du Green IT : chiffres clés, tendances, etcnIdentifier les acteurs et les outils du Green IT.nDéfinir une stratégie Green IT alignée sur la politique RSE / Développement Durable de l'organisationnMettre en place les outils de suivi, pilotage et gouvernance de la stratégie Green ITnIdentifier les dossiers clés pour votre organisation tant en terme de retour sur investissement que de réduction d’empreinte écologiquenProgramme :nJour 1nContexte du Green IT et Constats (Les enjeux du développement durable, les objectifs de développement durable, la RSE et sa position par rapport au Green IT)nOutils et connaissances de base (La notion de cycle de vie, Les impacts du numérique tout au long du cycle de vie, Analyse de Cycle de Vie, Bilan Carbone, Energie Grise)nJour 2nRéduire les impacts du numérique (Le cadre réglementaire, les normes, les labels)nOù en sont les entreprises ? ( Les bonnes pratiques du Green IT, Des exemples d’actions et d’initiatives)nLes composantes d’une démarche Green IT (Gouvernance, Parties prenantes)nMettre en oeuvre un stratégie Green IT (Les étapes-clé, piloter la performance, soit à partir d'une étude de cas, soit à partir du cas concret de l'entreprise)nInventaire des pratiques existantes grâce à une 'check list' sur les 8 thématiques du Green IT",
   "Type_organisme": "Formatrice d'entreprise",
+  "NOM": "Non fourni",
   "Intitule_de_la_formation": "Green IT",
   "Localisation_de_la_structure": "Boulogne-Billancourt",
   "Cette formation donne t-elle lieu à une validation des acquis ? Si oui, lesquels ?": "Non",
@@ -697,6 +707,7 @@
   "Le programme couvre / Objectif": "Un ou plusieurs modules / unités d'enseignement",
   "Courte_description_du_programme_Contenu": "BUT 2 - 1 Séance de cours de sensibilisation à la conso du numérique (1h)",
   "Type_organisme": "Enseignement supérieur",
+  "NOM": "Temesis",
   "Localisation_de_la_structure": "Anglet",
   "Duree_de_la_formation": 1,
   "Modalites": "Présentiel",
@@ -712,6 +723,7 @@
   "Le programme couvre / Objectif": "Un ou plusieurs modules / unités d'enseignement",
   "Courte_description_du_programme_Contenu": "BUT 3/LP - Séance de cours sur sensibilisation, présentation de bonnes pratiques + travail collectif (exposés) thématiques sur des points spécifiques en lien avec l'écoconception, la conso, des règles de bonnes pratiques, etc. (15h)",
   "Type_organisme": "Enseignement supérieur",
+  "NOM": "Non fourni",
   "Localisation_de_la_structure": "Anglet",
   "Duree_de_la_formation": 2,
   "Modalites": "Présentiel",
@@ -1190,6 +1202,7 @@
   "Formation_Continue_initiale": "Formation initiale",
   "Vous_êtes_une_structure": "Privée (établissement de formation, entreprise, etc.)",
   "Type_organisme": "Académique",
+  "NOM": "Non fourni",
   "Intitule_de_la_formation": "EPF Ecole d'ingénieur.e.s",
   "Localisation_de_la_structure": "Montpellier",
   "Cette formation donne t-elle lieu à une validation des acquis ? Si oui, lesquels ?": "Skill-based evaluation",
@@ -1303,6 +1316,7 @@
   "Vous_êtes_une_structure": "Privée (établissement de formation, entreprise, etc.)",
   "Courte_description_du_programme_Contenu": "- Les principes de bases du numérique responsable inspiré du travail de Vincent Courboulay, directeur de l'institut du numérique responsablen- Focus sur les déchets produits directement et indirectement par les usages et consommations d'objets numériquesn- Trucs et astuces pour réduire cette production de déchets",
   "Type_organisme": "auto-entreprise - travaileur indépendant",
+  "NOM": "Non fourni",
   "Intitule_de_la_formation": "Le numérique responsable pour les familles zéro déchets",
   "Localisation_de_la_structure": "Morlaix",
   "Cette formation donne t-elle lieu à une validation des acquis ? Si oui, lesquels ?": "Non",
@@ -1439,15 +1453,7 @@
   "Latitude": "2.2368863",
   "Longitude": "48.8841522"
  },
- {
-  "Formation_Continue_initiale": "Formation initiale",
-  "Vous_êtes_une_structure": "Publique (université, école d'ingénieur, etc.)",
-  "Libellé_de_l'établissement": "Mines Saint-Étienne",
-  "Libellé du département / Unité de formation": "Institut Henri Fayol",
-  "Le programme couvre / Objectif": "Sujets abordés :n1. Evaluer ses fournisseurs et prestataires : Comprendre l'empreinte carbone de ses fournisseurs, labels et certifications RSE/environnementales des entreprises, labels et certifications de l'informatique et du recyclage des objets électroniques dans le cadre B2B, évaluation de la gestion de la fin de vie de son parc d'équipementsn2. Formaliser une politique d'achat Numérique Responsable : aspects reglementaires, contract management, normes, contrats IT, clausiers et cahier des charges",
-  "Courte_description_du_programme_Contenu": "La séance de cours « Systèmes d'information et responsabilité sociétale » s'inscrit dans un module de cours sur les bonnes pratiques du développement logiciel. La majorité du module est dédiée à des bonnes pratiques d'un point de vue de la programmation (design patterns, principes SOLID) mais 2h de cours sont dédiées au numérique responsable.",
-  "URL décrivant le programme": "http://www.vcharpenay.link/courses/num-responsable.html"
- }
+
  
 ];
 </script>
@@ -1473,7 +1479,6 @@
 	<section id="liste">
 
 	<input type="text" id="myInput" onkeyup="recherche()" placeholder="Recherche formations ..." title="Rechercher">
-	<!--<input type="text" onkeyup="search(event)" placeholder="Enter Search Key Here" />-->
 
 	<section>
             <?php
@@ -1562,5 +1567,4 @@
 
 
 </body>
-
 </html>

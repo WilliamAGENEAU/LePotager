@@ -5,11 +5,67 @@ function init() {
         maxZoom: 19,
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
+
     
+    
+    L.control.scale({ position: 'bottomleft' }).addTo(map);
+
+    var markersLayer = new L.LayerGroup();
+
+    map.addLayer(markersLayer);
+
+    var controlSearch = new L.Control.Search({
+		position:'topright',		
+		layer: markersLayer,
+		initial: false,
+		zoom: 12,
+		marker: false
+	});
+
+	map.addControl( controlSearch );
+    
+
+    /*L.Control.geocoder().addTo(map);*/
+
     Object.entries(json).forEach(objet => {
-        var marker = L.marker([objet[1].Longitude,objet[1].Latitude]).addTo(map);
-        marker.bindPopup(objet[1].NOM);
-    })
+        if(objet[1].NOM!=null){
+            var marker = L.marker([objet[1].Longitude,objet[1].Latitude], {title: objet[1].NOM, City : objet[1].Localisation_de_la_structure}).addTo(map);
+            marker.bindPopup('Nom : ' +  objet[1].NOM + '<br> Ville : ' + objet[1].Localisation_de_la_structure);
+            markersLayer.addLayer(marker);
+
+        }
+        
+        
+    });
+
+    
+
+    
+}
+
+function recherche() {
+	var input, filter, found, table, tr, td, i, j;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td");
+        for (j = 0; j < td.length; j++) {
+            if (td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                found = true;
+            }
+        }
+        if (found) {
+            tr[i].style.display = "";
+            found = false;
+        } else {
+            tr[i].style.display = "none";
+        }
+    }
+    /*
+    var map = document.getElementById("map");
+    console.log(map);*/
 }
 
 var panier = [];
