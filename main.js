@@ -34,3 +34,7 @@ function addPanier(r){
     }
     console.log(panier);
 }
+
+var panier = [];
+
+var myjson = [];
