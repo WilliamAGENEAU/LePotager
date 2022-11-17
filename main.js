@@ -5,11 +5,40 @@ function init() {
         maxZoom: 19,
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
+
     
+    L.control.geocoder().addTo(map);
+    L.control.scale({ position: 'bottomleft' }).addTo(map);
+
     Object.entries(json).forEach(objet => {
         var marker = L.marker([objet[1].Longitude,objet[1].Latitude]).addTo(map);
         marker.bindPopup(objet[1].NOM);
     })
+}
+
+function recherche() {
+	var input, filter, found, table, tr, td, i, j;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td");
+        for (j = 0; j < td.length; j++) {
+            if (td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                found = true;
+            }
+        }
+        if (found) {
+            tr[i].style.display = "";
+            found = false;
+        } else {
+            tr[i].style.display = "none";
+        }
+    }
+    /*
+    var map = document.getElementById("map");
+    console.log(map);*/
 }
 
 var panier = [];
