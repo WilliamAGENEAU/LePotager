@@ -1,5 +1,7 @@
 var panier = new Array();
 
+var json = require();
+
 function printDiv() {
     var divContents = document.getElementById("panier").innerHTML;
     var a = window.open('', '', 'height=800, width=800');
