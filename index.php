@@ -39,7 +39,6 @@
   </div>
 </nav>
 <body>
-
 	<div class="titre">
 	<img src="images\DESIGN4GREEN_logo_vecto_Blanc.png" width="40%" weight="40%">
 	</div>
@@ -47,13 +46,16 @@
 	<div id='carte'>
 		<iframe src="https://api.jawg.io/maps/c111bdcc-60ac-4d6b-9713-81ca5d705f0e/b0b3057a-7554-4d39-b93a-af8b7a11184f.html?access-token=mSx8rWaBLl4TKFIAND6r9V8or0NfCPwyPr5QgPVCt4lLcHCAmxzZbawvhGuq9yMD" width="1200px" height="800px"></iframe>
 	</div>
+
+	<input type="text" id="myInput" onkeyup="recherche()" placeholder="Rechercher une formation..." title="Recherche">
+
 	<section>
             <?php
                 $data = file_get_contents("utils/data.geojson");  
                 $data = json_decode($data, true);
             ?>
             <div class="tbl-header">
-                <table cellpadding="0" cellspacing="0" border="0">
+                <table cellpadding="0" cellspacing="0" border="0" >
                     <thead>
                         <tr>
                             <th> Formation Continue / initiale : </th>
@@ -65,14 +67,13 @@
                             <th> Localisation de la structure (ville) : </th>
                             <th> Durée de la formation / intervention (en j) : </th>
                             <th> Modalités d’accès à la formation (présentiel / distanciel / hybride) : </th>
-                            <th></th>
                             
                         </tr>
                     </thead>
                 </table>
             </div>
             <div class="tbl-content">
-                <table cellpadding="0" cellspacing="0" border="0">
+                <table cellpadding="0" cellspacing="0" border="0" id="myTable">
                     <tbody>
                             <?php
                             for($i=0; $i<95;$i++){
@@ -85,12 +86,18 @@
                                 <td><?php echo $data['features'][$i]['properties']["Localisation_de_la_structure"]; ?> </td>
                                 <td><?php echo $data['features'][$i]['properties']["Duree_de_la_formation"]; ?> </td>
                                 <td><?php echo $data['features'][$i]['properties']["Modalites"]; ?> </td>
-                                <td><button onclick=''>Ajouter au Panier</button></td>
                             </tr>
                             <?php
                             }
                             ?>
                     </tbody>
+
+                    
+                    <!--<tbody id='data-output'>
+
+
+
+                    </tbody>-->
 
 
                 </table>
@@ -113,8 +120,24 @@
         a.print();
     }
 
-    function addPanier(){
-
-    }
+	
+	function recherche() {
+	var input, filter, table, tr, td, i, txtValue;
+	input = document.getElementById("myInput");
+	filter = input.value.toUpperCase();
+	table = document.getElementById("myTable");
+	tr = table.getElementsByTagName("tr");
+	for (i = 0; i < tr.length; i++) {
+		td = tr[i].getElementsByTagName("td")[0];
+		if (td) {
+		txtValue = td.textContent || td.innerText;
+		if (txtValue.toUpperCase().indexOf(filter) > -1) {
+			tr[i].style.display = "";
+		} else {
+			tr[i].style.display = "none";
+		}
+		}       
+	}
+	}
 </script>
 </html>
