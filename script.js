@@ -10,7 +10,7 @@ fetch("utils/data.geojson")
                             var y=  x.insertCell(1);
                             y.innerHTML= data.features[r].properties["Type_organisme"]
                             var y=  x.insertCell(2);
-                            y.innerHTML= data.features[r].properties["NOM_de_l'organisme"]
+                            y.innerHTML= data.features[r].properties["NOM"]
                             var y=  x.insertCell(3);
                             y.innerHTML= data.features[r].properties["Intitule_de_la_formation"]
                             var y=  x.insertCell(4);
