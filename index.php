@@ -1486,12 +1486,12 @@
                         <tr>
                             <th> Formation Continue / initiale : </th>
                             <th> Type d'organisme : </th>
-                            
-                                <th> Intitulé de la formation : </th>
-                                <th> Localisation de la structure (ville) : </th>
-                                <th> Durée de la formation / intervention (en j) : </th>
-                                <th> Modalités d’accès à la formation (présentiel / distanciel / hybride) : </th>
-                                <th></th>
+                            <th> Nom d'organisme : </th>
+                            <th> Intitulé de la formation : </th>
+                            <th> Localisation de la structure (ville) : </th>
+                            <th> Durée de la formation / intervention (en j) : </th>
+                            <th> Modalités d’accès à la formation (présentiel / distanciel / hybride) : </th>
+                            <th></th>
                                 
                             </tr>
                         </thead>
