@@ -182,10 +182,11 @@ form {
 
 }
 #carte {
-  margin-left: 10%;
+  margin-left: 5%;
 }
 .titre{
-    margin-left: 30%;
+    margin-left: 70vh;
+    
 }
 h1{
   font-family: system-ui;
@@ -233,7 +234,7 @@ body{
   background: linear-gradient(to right, #25c481, #25b7c4);
   font-family: 'Roboto', sans-serif;
 }
-section{
+#liste{
   margin: 50px;
 }
 
@@ -241,5 +242,24 @@ nav {
   position: fixed;
   width: 100%;
   display: flex;
-  
+  justify-content: space-between;
+  align-items: center;
+}
+.fadeindown {
+  animation-name: fadeindown;
+  animation-duration: .5s;
+  animation-delay: .25s;
+  animation-fill-mode: both;
+  opacity: 0;
+}
+
+@keyframes fadeindown {
+  from {
+      transform: translate3d(0, -40px, 0)
+  }
+
+  to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0)
+  }
 }
