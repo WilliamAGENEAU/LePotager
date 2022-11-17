@@ -7,13 +7,32 @@ function init() {
     }).addTo(map);
 
     
-    L.control.geocoder().addTo(map);
+    
     L.control.scale({ position: 'bottomleft' }).addTo(map);
+    var markersLayer = new L.LayerGroup();
+    map.addLayer(markersLayer);
+    var controlSearch = new L.Control.Search({
+		position:'topright',		
+		layer: markersLayer,
+		initial: false,
+		zoom: 12,
+		marker: false
+	});
+    map.addControl( controlSearch );
+    console.log(markersLayer);
+    /*L.Control.geocoder().addTo(map);*/
 
     Object.entries(json).forEach(objet => {
-        var marker = L.marker([objet[1].Longitude,objet[1].Latitude]).addTo(map);
+        var marker = L.marker([objet[1].Longitude,objet[1].Latitude], {title: objet[1].NOM}).addTo(map);
         marker.bindPopup(objet[1].NOM);
-    })
+        markersLayer.addLayer(marker);
+        
+    });
+    console.log(markersLayer);
+
+    
+
+    
 }
 
 function recherche() {

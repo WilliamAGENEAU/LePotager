@@ -14,12 +14,16 @@
      crossorigin=""
 	/>
 	<link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+	<link rel="stylesheet" href="leaflet-search.css" />
 	
 	
 
     <script src="main.js"></script>
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script> 
-	<script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+     integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
+     crossorigin=""></script>
+	<script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>	
+	<script src="leaflet-search.js"></script>
     <script>var json = [
  {
   "Formation_Continue_initiale": "Formation Continue",
@@ -1443,15 +1447,7 @@
   "Latitude": "2.2368863",
   "Longitude": "48.8841522"
  },
- {
-  "Formation_Continue_initiale": "Formation initiale",
-  "Vous_êtes_une_structure": "Publique (université, école d'ingénieur, etc.)",
-  "Libellé_de_l'établissement": "Mines Saint-Étienne",
-  "Libellé du département / Unité de formation": "Institut Henri Fayol",
-  "Le programme couvre / Objectif": "Sujets abordés :n1. Evaluer ses fournisseurs et prestataires : Comprendre l'empreinte carbone de ses fournisseurs, labels et certifications RSE/environnementales des entreprises, labels et certifications de l'informatique et du recyclage des objets électroniques dans le cadre B2B, évaluation de la gestion de la fin de vie de son parc d'équipementsn2. Formaliser une politique d'achat Numérique Responsable : aspects reglementaires, contract management, normes, contrats IT, clausiers et cahier des charges",
-  "Courte_description_du_programme_Contenu": "La séance de cours « Systèmes d'information et responsabilité sociétale » s'inscrit dans un module de cours sur les bonnes pratiques du développement logiciel. La majorité du module est dédiée à des bonnes pratiques d'un point de vue de la programmation (design patterns, principes SOLID) mais 2h de cours sont dédiées au numérique responsable.",
-  "URL décrivant le programme": "http://www.vcharpenay.link/courses/num-responsable.html"
- }
+
  
 ];
 </script>
