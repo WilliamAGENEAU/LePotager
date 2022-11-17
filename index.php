@@ -1524,7 +1524,7 @@
         <form action="mailto:LePotager?subject=Demande de devis" name="envoi" method=POST enctype="text/plain">
             <br>
                 <input type="email" name="_replyto" placeholder="Email"><br><br>
-                <button type="submit">Devis</button>
+                <button type="submit">BITE</button>
         </form>
 	  </div>
 	  </div>
