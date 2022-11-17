@@ -19,16 +19,12 @@
 </head>
 <nav role='navigation'>
   <div id="menuToggle">
-    <input type="checkbox" />
+    <input type="checkbox" onclick='afficherPanier()'/>
     <span></span>
     <span></span>
     <span></span>
     <ul id="menu">
-		<div id="panier">
-    		<li>-----</li>
-      		<li>-----</li>
-      		<li>-----</li>
-		</div>
+
 	  <div id="outer">
   		<div class="inner">
 		  <button type="submit" onclick="printDiv()"><i ></i> Print</button>
