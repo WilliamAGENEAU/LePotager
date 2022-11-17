@@ -86,6 +86,7 @@
                                 <td><?php echo $data['features'][$i]['properties']["Localisation_de_la_structure"]; ?> </td>
                                 <td><?php echo $data['features'][$i]['properties']["Duree_de_la_formation"]; ?> </td>
                                 <td><?php echo $data['features'][$i]['properties']["Modalites"]; ?> </td>
+								<td><button onclick=''>Ajouter au Panier</button></td>
                             </tr>
                             <?php
                             }
