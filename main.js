@@ -14,26 +14,29 @@ function init() {
 
     map.addLayer(markersLayer);
 
-    map.addControl( new L.Control.Search({
-		container: 'findbox',
+    var controlSearch = new L.Control.Search({
+		position:'topright',		
 		layer: markersLayer,
 		initial: false,
-		collapsed: false
-	}) );
+		zoom: 12,
+		marker: false
+	});
+
+	map.addControl( controlSearch );
+    
 
     /*L.Control.geocoder().addTo(map);*/
 
     Object.entries(json).forEach(objet => {
         if(objet[1].NOM!=null){
-            var marker = L.marker([objet[1].Longitude,objet[1].Latitude], {title: objet[1].NOM}).addTo(map);
-            marker.bindPopup(objet[1].NOM);
+            var marker = L.marker([objet[1].Longitude,objet[1].Latitude], {title: objet[1].NOM, City : objet[1].Localisation_de_la_structure}).addTo(map);
+            marker.bindPopup('Nom : ' +  objet[1].NOM + '<br> Ville : ' + objet[1].Localisation_de_la_structure);
             markersLayer.addLayer(marker);
 
         }
         
         
     });
-    /*console.log(markersLayer);*/
 
     
 
