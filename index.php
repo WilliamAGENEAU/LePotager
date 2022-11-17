@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="main.js"></script>
 </head>
-<body>
+
 <nav role='navigation'>
   <div id="menuToggle">
     <input type="checkbox" />
@@ -26,7 +26,7 @@
 		</div>
 	  <div id="outer">
   		<div class="inner">
-		  <button type="submit" onclick="printDiv()"><i></i>Print</button>
+		  <button type="submit" onclick="printDiv()"><i ></i> Print</button>
 	  </div>
 	  <div class="inner">
 	  <form action="https://formspree.io/f/mwkzywdl" method="POST"><br>
@@ -38,7 +38,7 @@
     </ul>
   </div>
 </nav>
-
+<body>
     <?php
     $panier = array();
     $panier = array_fill(0, 3, null);
@@ -63,42 +63,40 @@
                             <th> Formation Continue / initiale : </th>
                             <th> Type d'organisme : </th>
                             
-                            <th> Nom de l'organisme : </th>
-                        
-                            <th> Intitulé de la formation : </th>
-                            <th> Localisation de la structure (ville) : </th>
-                            <th> Durée de la formation / intervention (en j) : </th>
-                            <th> Modalités d’accès à la formation (présentiel / distanciel / hybride) : </th>
-                            <th></th>
-                            
-                        </tr>
-                    </thead>
-                </table>
-            </div>
-            <div class="tbl-content">
-                <table cellpadding="0" cellspacing="0" border="0">
-                    <tbody>
-                            <?php
-                            for($i=0; $i<95;$i++){
-                            ?> 
-                            <tr>
-                                <td><?php echo $data['features'][$i]['properties']["Formation_Continue_initiale"]; ?> </td>
-                                <td><?php echo $data['features'][$i]['properties']["Type_organisme"]; ?> </td>
-                                <td><?php echo $data['features'][$i]['properties']["NOM_de_l'organisme"]; ?> </td>
-                                <td><?php echo $data['features'][$i]['properties']["Intitule_de_la_formation"]; ?> </td>
-                                <td><?php echo $data['features'][$i]['properties']["Localisation_de_la_structure"]; ?> </td>
-                                <td><?php echo $data['features'][$i]['properties']["Duree_de_la_formation"]; ?> </td>
-                                <td><?php echo $data['features'][$i]['properties']["Modalites"]; ?> </td>
-                                <td><button onclick=''>Ajouter au Panier</button></td>
+                                <th> Intitulé de la formation : </th>
+                                <th> Localisation de la structure (ville) : </th>
+                                <th> Durée de la formation / intervention (en j) : </th>
+                                <th> Modalités d’accès à la formation (présentiel / distanciel / hybride) : </th>
+                                <th></th>
+                                
                             </tr>
-                            <?php
-                            }
-                            ?>
-                    </tbody>
+                        </thead>
+                    </table>
+                </div>
+                <div class="tbl-content">
+                    <table cellpadding="0" cellspacing="0" border="0">
+                        <tbody>
+                                <?php
+                                for($i=0; $i<95;$i++){
+                                ?> 
+                                <tr>
+                                    <td><?php echo $data['features'][$i]['properties']["Formation_Continue_initiale"]; ?> </td>
+                                    <td><?php echo $data['features'][$i]['properties']["Type_organisme"]; ?> </td>
+                                    <td><?php echo $data['features'][$i]['properties']["NOM_de_l'organisme"]; ?> </td>
+                                    <td><?php echo $data['features'][$i]['properties']["Intitule_de_la_formation"]; ?> </td>
+                                    <td><?php echo $data['features'][$i]['properties']["Localisation_de_la_structure"]; ?> </td>
+                                    <td><?php echo $data['features'][$i]['properties']["Duree_de_la_formation"]; ?> </td>
+                                    <td><?php echo $data['features'][$i]['properties']["Modalites"]; ?> </td>
+                                    <td><button type="submit" onclick="addPanier(<?php echo $i;?>)">Ajouter au panier</button></td>
+                                </tr>
+                                <?php
+                                }
+                                ?>
+                        </tbody>
 
 
-                </table>
-            </div>
+                    </table>
+                </div>
         </section>
 
 </body>
@@ -107,19 +105,19 @@
         var divContents = document.getElementById("panier").innerHTML;
         var a = window.open('', '', 'height=800, width=800');
         a.document.write('<html>');
+        a.document.write(
+            '<head><link rel="stylesheet" href="./../css/style.css" type="text/css"><link rel="stylesheet" href="./../utils/lib/bootstrap.min.css" /></head>'
+        );
         a.document.write('<body>');
         a.document.write(divContents);
         a.document.write('</body></html>');
         a.document.close();
         a.print();
     }
-</script>
-<script>
 
     function addPanier(){
         for(int i = 0; i<3; i++){
             
         }
-    }
-</script>
+    </script>    
 </html>
