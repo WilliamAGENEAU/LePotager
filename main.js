@@ -38,9 +38,7 @@ function printDiv() {
     var divContents = document.getElementById("list").innerHTML;
     var a = window.open('', '', 'height=800, width=800');
     a.document.write('<html>');
-    a.document.write(
-        '<head><link rel="stylesheet" href="css/style.css"></head>'
-    );
+    a.document.write('<head><link rel="stylesheet" href="css/style.css"></head>');
     a.document.write('<body>');
     a.document.write('<h1>Devis</h1>');
     a.document.write('<p>Liste des formations sélectionnées :</p>');
