@@ -1,3 +1,5 @@
+var panier = new Array();
+
 function printDiv() {
     var divContents = document.getElementById("panier").innerHTML;
     var a = window.open('', '', 'height=800, width=800');
@@ -10,4 +12,7 @@ function printDiv() {
     a.document.write('</body></html>');
     a.document.close();
     a.print();
+}
+function addPanier(i){
+
 }
