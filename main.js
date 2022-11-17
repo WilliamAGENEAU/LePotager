@@ -53,6 +53,12 @@ function printDiv() {
 function addPanier(r){
     if(panier.length<3){
         panier.push(myjson[r]);
+    }else{
+        alert('Votre panier est déja plein');
     }
     console.log(panier);
+}
+
+function supprPanier(){
+    
 }
