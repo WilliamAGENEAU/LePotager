@@ -91,6 +91,8 @@ input[type=email] {
     border-radius: 4px;
     box-sizing: border-box;
     opacity: 1;
+    margin-left: -115px;
+
 }
 form {
     

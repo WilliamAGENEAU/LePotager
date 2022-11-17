@@ -1519,6 +1519,7 @@
   		<div class="inner">
 		  <button type="submit" onclick="printDiv()"><i ></i> Print</button>
 	  </div>
+      <br>
 	  <div class="inner">
 	  <form action="https://formspree.io/f/mwkzywdl" method="POST"><br>
                 <input type="email" name="_replyto" placeholder="Email"><br>
