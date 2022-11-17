@@ -41,7 +41,8 @@
 <body>
     <?php
     $panier = array();
-
+    $panier = array_fill(0, 3, null);
+    var_dump($panier);
     ?>
 	<div class="titre">
 	<img src="images\DESIGN4GREEN_logo_vecto_Blanc.png" width="40%" weight="40%">
@@ -117,7 +118,9 @@
     }
 
     function addPanier(){
-        
+        for(int i = 0; i<3; i++){
+            
+        }
     }
 </script>
 </html>
