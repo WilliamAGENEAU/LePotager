@@ -1513,7 +1513,7 @@
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
-    <ul id="menu">
+    <ul >
 
 	  <div id="outer">
   		<div class="inner">
