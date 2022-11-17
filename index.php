@@ -11,11 +11,19 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
      integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
-     crossorigin=""/>
+     crossorigin=""
+	/>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+	<link rel="stylesheet" href="leaflet-search.css" />
+	
+	
+
     <script src="main.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
      integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
      crossorigin=""></script>
+	<script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>	
+	<script src="leaflet-search.js"></script>
     <script>var json = [
  {
   "Formation_Continue_initiale": "Formation Continue",
@@ -1439,15 +1447,7 @@
   "Latitude": "2.2368863",
   "Longitude": "48.8841522"
  },
- {
-  "Formation_Continue_initiale": "Formation initiale",
-  "Vous_êtes_une_structure": "Publique (université, école d'ingénieur, etc.)",
-  "Libellé_de_l'établissement": "Mines Saint-Étienne",
-  "Libellé du département / Unité de formation": "Institut Henri Fayol",
-  "Le programme couvre / Objectif": "Sujets abordés :n1. Evaluer ses fournisseurs et prestataires : Comprendre l'empreinte carbone de ses fournisseurs, labels et certifications RSE/environnementales des entreprises, labels et certifications de l'informatique et du recyclage des objets électroniques dans le cadre B2B, évaluation de la gestion de la fin de vie de son parc d'équipementsn2. Formaliser une politique d'achat Numérique Responsable : aspects reglementaires, contract management, normes, contrats IT, clausiers et cahier des charges",
-  "Courte_description_du_programme_Contenu": "La séance de cours « Systèmes d'information et responsabilité sociétale » s'inscrit dans un module de cours sur les bonnes pratiques du développement logiciel. La majorité du module est dédiée à des bonnes pratiques d'un point de vue de la programmation (design patterns, principes SOLID) mais 2h de cours sont dédiées au numérique responsable.",
-  "URL décrivant le programme": "http://www.vcharpenay.link/courses/num-responsable.html"
- }
+
  
 ];
 </script>
@@ -1466,9 +1466,6 @@
 
 	<div id="map"></div>
 
-	<div>
-	<span id="codes"></span>
-	</div>
     </section>
 	<section id="liste">
 
@@ -1476,10 +1473,7 @@
 	<!--<input type="text" onkeyup="search(event)" placeholder="Enter Search Key Here" />-->
 
 	<section>
-            <?php
-                $data = file_get_contents("utils/data.geojson");  
-                $data = json_decode($data, true);
-            ?>
+            
             <div class="tbl-header">
                 <table cellpadding="0" cellspacing="0" border="0" >
                     <thead>
@@ -1502,86 +1496,6 @@
                 </div>
         </section>
 
-	
-  
-  <!-- Trigger/Open The Modal -->
-<button id="myBtn"><P>Panier</P></button>
-
-<!-- The Modal -->
-<div id="myModal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <ul >
-
-	  <div id="outer">
-  		<div class="inner">
-		  <button type="submit" onclick="printDiv()"><i ></i> Print</button>
-	  </div>
-      <br>
-	  <div class="inner">
-        <form action="mailto:LePotager?subject=Demande de devis" name="envoi" method=POST enctype="text/plain">
-            <br>
-                <input type="email" name="_replyto" placeholder="Email"><br><br>
-                <button type="submit">Devis</button>
-        </form>
-	  </div>
-	  </div>
-    </ul>
-  </div>
-
-<script>
-	/*Ca marche plus*/
-	function recherche() {
-	var input, filter, found, table, tr, td, i, j;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    table = document.getElementById("myTable");
-    tr = table.getElementsByTagName("tr");
-    for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td");
-        for (j = 0; j < td.length; j++) {
-            if (td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
-                found = true;
-            }
-        }
-        if (found) {
-            tr[i].style.display = "";
-            found = false;
-        } else {
-            tr[i].style.display = "none";
-        }
-    }
-	}
-</script>  
-<script>
-// Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-</script> 
 </body>
 
 </html>
