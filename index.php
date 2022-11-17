@@ -43,16 +43,16 @@
   
 </nav>
 <body>
+<div class="titre">
+	<img src="images\DESIGN4GREEN_logo_vecto_Blanc.png" width="40%" weight="40%">
+	</div>
+	<h1> Formations Green IT / Eco-Design / Eco-Conception - TEAM 14</h1>
     <section id="carte">
     <?php
     $panier = array();
     $panier = array_fill(0, 3, null);
     var_dump($panier);
     ?>
-	<div class="titre">
-	<img src="images\DESIGN4GREEN_logo_vecto_Blanc.png" width="40%" weight="40%">
-	</div>
-	<h1> Formations Green IT / Eco-Design / Eco-Conception - TEAM 14</h1>
 	<div id='carte'>
 		<iframe src="https://api.jawg.io/maps/c111bdcc-60ac-4d6b-9713-81ca5d705f0e/b0b3057a-7554-4d39-b93a-af8b7a11184f.html?access-token=mSx8rWaBLl4TKFIAND6r9V8or0NfCPwyPr5QgPVCt4lLcHCAmxzZbawvhGuq9yMD" width="1200px" height="800px"></iframe>
 	</div>
