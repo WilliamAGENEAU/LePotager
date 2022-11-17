@@ -1454,16 +1454,12 @@
 </head>
 <nav role='navigation'>
   <div id="menuToggle">
-    <input type="checkbox" />
+    <input type="checkbox" onclick='afficherPanier()'/>
     <span></span>
     <span></span>
     <span></span>
     <ul id="menu">
-		<div id="panier">
-    		<li>-----</li>
-      		<li>-----</li>
-      		<li>-----</li>
-		</div>
+
 	  <div id="outer">
   		<div class="inner">
 		  <button type="submit" onclick="printDiv()"><i ></i> Print</button>
@@ -1479,11 +1475,6 @@
   </div>
 </nav>
 <body onload="init()">
-    <?php
-    $panier = array();
-    $panier = array_fill(0, 3, null);
-    var_dump($panier);
-    ?>
 <script src="main.js"></script>
 	<div class="titre">
 	<img src="images\DESIGN4GREEN_logo_vecto_Blanc.png" width="40%" weight="40%">
