@@ -59,6 +59,14 @@ function addPanier(r){
     console.log(panier);
 }
 
-function supprPanier(){
-    
+function afficherPanier(){
+    let text = "";
+    for(var i = 0; i<panier.length; i++){
+        text += "<li>"+ panier[i] +"</li>";
+    }
+    document.getElementById("panier").innerHTML = text;
+}
+
+function supprPanier(r){
+
 }
