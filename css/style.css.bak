@@ -191,4 +191,4 @@ h1{
   text-align: center;
 }
 
-#map { height: 600px; }
+#map { height: 800px; }
