@@ -1522,7 +1522,7 @@
       <br>
 	  <div class="inner">
 	  <form action="https://formspree.io/f/mwkzywdl" method="POST"><br>
-                <input type="email" name="_replyto" placeholder="Email"><br>
+                <input type="email" name="_replyto" placeholder="Email"><br><br>
                 <button type="submit">Devis</button>
             </form>
 	  </div>
