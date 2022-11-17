@@ -1521,10 +1521,11 @@
 	  </div>
       <br>
 	  <div class="inner">
-	  <form action="https://formspree.io/f/mwkzywdl" method="POST"><br>
+        <form action="mailto:LePotager?subject=Demande de devis" name="envoi" method=POST enctype="text/plain">
+            <br>
                 <input type="email" name="_replyto" placeholder="Email"><br><br>
                 <button type="submit">Devis</button>
-            </form>
+        </form>
 	  </div>
 	  </div>
     </ul>
