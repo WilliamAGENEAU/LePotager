@@ -11,11 +11,6 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="main.js"></script>
 </head>
-<?php
-    $panier = array();
-    $panier = array_fill(0, 3, null);
-    var_dump($panier);
-?>
 <nav role='navigation'>
   <div id="menuToggle">
     <input type="checkbox" />
@@ -43,11 +38,6 @@
   </div>
 </nav>
 <body>
-    <?php
-    $panier = array();
-    $panier = array_fill(0, 3, null);
-    var_dump($panier);
-    ?>
 	<div class="titre">
 	<img src="images\DESIGN4GREEN_logo_vecto_Blanc.png" width="40%" weight="40%">
 	</div>
@@ -79,30 +69,9 @@
                     </table>
                 </div>
                 <div class="tbl-content">
-                    <table cellpadding="0" cellspacing="0" border="0">
-                        <tbody>
-                                <?php
-                                for($i=0; $i<95;$i++){
-                                ?> 
-                                <tr>
-                                    <td><?php echo $data['features'][$i]['properties']["Formation_Continue_initiale"]; ?> </td>
-                                    <td><?php echo $data['features'][$i]['properties']["Type_organisme"]; ?> </td>
-                                    <td><?php echo $data['features'][$i]['properties']["NOM_de_l'organisme"]; ?> </td>
-                                    <td><?php echo $data['features'][$i]['properties']["Intitule_de_la_formation"]; ?> </td>
-                                    <td><?php echo $data['features'][$i]['properties']["Localisation_de_la_structure"]; ?> </td>
-                                    <td><?php echo $data['features'][$i]['properties']["Duree_de_la_formation"]; ?> </td>
-                                    <td><?php echo $data['features'][$i]['properties']["Modalites"]; ?> </td>
-                                    <td><button type="submit" onclick="addPanier(<?php echo $i;?>)">Ajouter au panier</button></td>
-                                </tr>
-                                <?php
-                                }
-                                ?>
-                        </tbody>
-
-
-                    </table>
+                    <p id="data-output"></p>
                 </div>
-        </section>
+    </section>
+</body> 
 
-</body>   
 </html>
