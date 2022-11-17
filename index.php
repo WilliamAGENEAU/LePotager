@@ -94,7 +94,7 @@
         </section>
 
 <script>
-	
+	/*Ca marche*/
 	function recherche() {
 	var input, filter, found, table, tr, td, i, j;
     input = document.getElementById("myInput");
