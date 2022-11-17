@@ -1,13 +1,5 @@
 var panier = [];
-/**
- * read the csv file
- *
- * @param {*} input
- */
-function read_csv(input) {
-    let file = input.files[0];
-    //let file = "utils/INR_GR491-Plus-Automaton-11-2021.xlsx";
-    let fileReader = new FileReader();
+
 
 var json = []
 
@@ -50,10 +42,6 @@ function addPanier(r){
         panier.push(json[r]);
     }
     console.log(panier);
-}
-    fileReader.onerror = function () {
-        alert(fileReader.error);
-    };
 }
 
 function init() {
