@@ -11,7 +11,11 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="main.js"></script>
 </head>
-
+<?php
+    $panier = array();
+    $panier = array_fill(0, 3, null);
+    var_dump($panier);
+?>
 <nav role='navigation'>
   <div id="menuToggle">
     <input type="checkbox" />
@@ -20,9 +24,9 @@
     <span></span>
     <ul id="menu">
 		<div id="panier">
-    		<li>-----</li>
-      		<li>-----</li>
-      		<li>-----</li>
+    		<li><?php echo $panier[0]?></li>
+      		<li><?php echo $panier[1]?></li>
+      		<li><?php echo $panier[2]?></li>
 		</div>
 	  <div id="outer">
   		<div class="inner">
@@ -39,11 +43,6 @@
   </div>
 </nav>
 <body>
-    <?php
-    $panier = array();
-    $panier = array_fill(0, 3, null);
-    var_dump($panier);
-    ?>
 	<div class="titre">
 	<img src="images\DESIGN4GREEN_logo_vecto_Blanc.png" width="40%" weight="40%">
 	</div>
@@ -99,25 +98,5 @@
                 </div>
         </section>
 
-</body>
-<script>
-    function printDiv() {
-        var divContents = document.getElementById("panier").innerHTML;
-        var a = window.open('', '', 'height=800, width=800');
-        a.document.write('<html>');
-        a.document.write(
-            '<head><link rel="stylesheet" href="./../css/style.css" type="text/css"><link rel="stylesheet" href="./../utils/lib/bootstrap.min.css" /></head>'
-        );
-        a.document.write('<body>');
-        a.document.write(divContents);
-        a.document.write('</body></html>');
-        a.document.close();
-        a.print();
-    }
-
-    function addPanier(){
-        for(int i = 0; i<3; i++){
-            
-        }
-    </script>    
+</body>   
 </html>
