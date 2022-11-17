@@ -88,13 +88,13 @@
                         </thead>
                     </table>
                 </div>
-                <div class="tbl-content">
+                <div class="tbl-content" id="myTable">
                     <p id="data-output"></p>
                 </div>
         </section>
 
-</body>
 <script>
+	
 	function recherche() {
 	var input, filter, found, table, tr, td, i, j;
     input = document.getElementById("myInput");
@@ -117,4 +117,6 @@
     }
 	}
 </script>   
+</body>
+
 </html>
