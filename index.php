@@ -54,7 +54,12 @@
 
 	<div id="map"></div>
 
-	<input type="text" id="myInput" onkeyup="recherche()" placeholder="Recherche formations ..." title="Rechercher">
+	<div>
+	<span id="codes"></span>
+	</div>
+
+	<!--<input type="text" id="myInput" onkeyup="recherche()" placeholder="Recherche formations ..." title="Rechercher">-->
+	<input type="text" onkeyup="search(event)" placeholder="Enter Search Key Here" />
 
 	<section>
             <?php

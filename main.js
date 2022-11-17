@@ -60,7 +60,9 @@ function init() {
                     "Cette formation donne t-elle lieu à une validation des acquis ? Si oui, lesquels ?": "non",
                     "Duree_de_la_formation": "1.5",
                     "Modalites": "Distanciel",
-                    "URL décrivant le programme": "https://thegreencompagnon.com/cours/developpeur-responsable/"
+                    "URL décrivant le programme": "https://thegreencompagnon.com/cours/developpeur-responsable/",
+                    "Latitude" : "1.8883335",
+                    "Longitude" : "46.603354",
                 }
             },
             {
@@ -3169,4 +3171,30 @@ function init() {
     };
 
     L.geoJSON(myGeoJson).addTo(map);
+
+    
+
 }
+
+var codesEl = null;
+
+    function printData(Arr) {
+    for(var i=0; i<Arr.length; i++) {
+        codesEl.innerText += `\n${Arr[i].features[0].properties["Localisation_de_la_structure"]} `;
+    }
+    }
+
+    function search(ev) {
+        var key = ev.target.value;
+        //  codesEl.innerText = null;
+        
+        printData(this.myGeoJson.filter((data)=>{
+          var regex = new RegExp(key, "i");
+          return data.features[0].properties["Localisation_de_la_structure"].match(regex);
+        }));
+      }
+      
+      window.onload = function() {
+        codesEl = document.getElementById("codes");
+        printData(this.myGeoJson);
+      }
