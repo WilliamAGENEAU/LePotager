@@ -1531,6 +1531,65 @@
                 </div>
         </section>
 
+    <button onclick='afficherPanier()'>Panier</button>
+    <div id='popup'>
+        <div id='panier' class='formContainer'>
+            <p id='list'></p>
+            <tr>
+                <td><button type="submit" onclick="printDiv()"><i ></i> Print</button></td>
+                <td><form action="mailto:LePotager?subject=Demande de devis" name="envoi" method=POST enctype="text/plain">
+                </br>
+                <input type="email" name="Bonjour bg" placeholder="Email"><br><br>
+                <button type="submit">Devis</button>
+                </form>
+                </td>
+            </tr>
+            </br>
+            <button type="button" onclick="supprPanier()">Vider le panier</button>  
+            </br>  
+            <button type="button" class="btn cancel" onclick="closePanier()">Close</button>
+        </div>    
+    </div>
+<script>
+	/*Ca marche plus*/
+	function recherche() {
+        var input, filter, found, table, tr, td, i, j;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td");
+            for (j = 0; j < td.length; j++) {
+                if (td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    found = true;
+                }
+            }
+            if (found) {
+                tr[i].style.display = "";
+                found = false;
+            } else {
+                tr[i].style.display = "none";
+            }
+        }
+	}
+    function afficherPanier(){
+        let text = "<ol>";
+        for(var i = 0; i<panier.length; i++){
+            if(panier[i] != null){
+                text += "<li class=''><a>"+ panier[i].NOM + "-" +panier[i].Intitule_de_la_formation + ":" + panier[i].Localisation_de_la_structure +"</li>";
+            }  
+        }
+        text += "</ol>";
+        document.getElementById("list").innerHTML = text;
+        document.getElementById("panier").style.display = "block";
+    }
+    function closePanier(){
+        document.getElementById("panier").style.display = "none";
+    }
+</script> 
+
+
 </body>
 
 </html>
