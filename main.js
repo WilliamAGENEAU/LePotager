@@ -44,6 +44,7 @@ function addPanier(r){
     console.log(panier);
 }
 
+
 function init() {
     var map = L.map('map').setView([48.856614, 2.352221], 5);
 
@@ -57,3 +58,4 @@ function init() {
         marker.bindPopup(objet[1].NOM);
     })
 }
+
