@@ -24,7 +24,11 @@ function init() {
 
     Object.entries(json).forEach(objet => {
         var marker = L.marker([objet[1].Longitude,objet[1].Latitude], {title: objet[1].NOM}).addTo(map);
-        marker.bindPopup(objet[1].NOM);
+        if (objet[1].NOM == null) {
+            
+        }else{
+            marker.bindPopup(objet[1].NOM);
+        }
         markersLayer.addLayer(marker);
         
     });
