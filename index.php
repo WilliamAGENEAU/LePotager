@@ -1503,10 +1503,7 @@
 	<!--<input type="text" onkeyup="search(event)" placeholder="Enter Search Key Here" />-->
 
 	<section>
-            <?php
-                $data = file_get_contents("utils/data.geojson");  
-                $data = json_decode($data, true);
-            ?>
+            
             <div class="tbl-header">
                 <table cellpadding="0" cellspacing="0" border="0" >
                     <thead>
