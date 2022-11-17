@@ -163,8 +163,6 @@ button:hover {
     color: #121522;
     transition: 0.2s;
     border: 5px #121522;
-    cursor: pointer;
-
 }
 input[type=email] {
     width: 300px;
@@ -182,20 +180,10 @@ form {
 
 }
 #carte {
-  margin-left: 5%;
+  margin-left: 10%;
 }
 .titre{
-<<<<<<< HEAD
     margin-left: 30%;
-}
-#map {
-  min-height: 500px;
-  height: 100%;
-  width: 100%;
-}
-=======
-    margin-left: 70vh;
-    
 }
 h1{
   font-family: system-ui;
@@ -203,89 +191,4 @@ h1{
   text-align: center;
 }
 
-table{
-  width:100%;
-  table-layout: fixed;
-}
-.tbl-header{
-  background-color: rgba(255,255,255,0.3);
- }
-.tbl-content{
-  height:300px;
-  overflow-x:auto;
-  margin-top: 0px;
-  border: 1px solid rgba(255,255,255,0.3);
-}
-th{
-  padding: 20px 15px;
-  text-align: left;
-  font-weight: 500;
-  font-size: 12px;
-  color: #fff;
-  text-transform: uppercase;
-}
-td{
-  padding: 15px;
-  text-align: left;
-  vertical-align:middle;
-  font-weight: 300;
-  font-size: 12px;
-  color: #fff;
-  border-bottom: solid 1px rgba(255,255,255,0.1);
-}
-
-#myInput {
-  background-repeat: no-repeat;
-  width: 50%;
-  font-size: 16px;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 7px;
-  margin-left: 20%;
-  margin-top: 10px;
-  
- }
-
-#map { height: 600px; 
-  z-index: -1;
-}
-
-
-/* demo styles */
-
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
-body{
-  background: -webkit-linear-gradient(left, #25c481, #25b7c4);
-  background: linear-gradient(to right, #25c481, #25b7c4);
-  font-family: 'Roboto', sans-serif;
-}
-#liste{
-  margin: 50px;
-}
-
-nav {
-  position: fixed;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.fadeindown {
-  animation-name: fadeindown;
-  animation-duration: .5s;
-  animation-delay: .25s;
-  animation-fill-mode: both;
-  opacity: 0;
-}
-
-@keyframes fadeindown {
-  from {
-      transform: translate3d(0, -40px, 0)
-  }
-
-  to {
-      opacity: 1;
-      transform: translate3d(0, 0, 0)
-  }
-}
->>>>>>> origin/main
+#map { height: 800px; }
