@@ -28,6 +28,8 @@ function printDiv() {
         '<head><link rel="stylesheet" href="./../css/style.css" type="text/css"><link rel="stylesheet" href="./../utils/lib/bootstrap.min.css" /></head>'
     );
     a.document.write('<body>');
+    a.document.write('<h1>Devis</h1>');
+    a.document.write('<p>Liste des formations sélectionnées :</p>');
     a.document.write(divContents);
     a.document.write('</body></html>');
     a.document.close();

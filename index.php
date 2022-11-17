@@ -9,7 +9,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="D4G">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+     integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+     crossorigin=""/>
     <script src="main.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+     integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
+     crossorigin=""></script>
 </head>
 <nav role='navigation'>
   <div id="menuToggle">
@@ -38,21 +44,35 @@
   </div>
 </nav>
 <body>
+    <?php
+    $panier = array();
+    $panier = array_fill(0, 3, null);
+    var_dump($panier);
+    ?>
 	<div class="titre">
 	<img src="images\DESIGN4GREEN_logo_vecto_Blanc.png" width="40%" weight="40%">
 	</div>
-	<h1> Formations Green IT / Eco-Design / Eco-Conception - TEAM 14</h1>
-	<div id='carte'>
-		<iframe src="https://api.jawg.io/maps/c111bdcc-60ac-4d6b-9713-81ca5d705f0e/b0b3057a-7554-4d39-b93a-af8b7a11184f.html?access-token=mSx8rWaBLl4TKFIAND6r9V8or0NfCPwyPr5QgPVCt4lLcHCAmxzZbawvhGuq9yMD" width="1200px" height="800px"></iframe>
+	<h1> Formations Green IT / Eco-Design / Eco-Conception</h1>
+
+
+	<div id="map"></div>
+
+	<div>
+	<span id="codes"></span>
 	</div>
     </section>
 	<section id="liste">
+
+	<!--<input type="text" id="myInput" onkeyup="recherche()" placeholder="Recherche formations ..." title="Rechercher">-->
+	<input type="text" onkeyup="search(event)" placeholder="Enter Search Key Here" />
+
+	<section>
             <?php
                 $data = file_get_contents("utils/data.geojson");  
                 $data = json_decode($data, true);
             ?>
             <div class="tbl-header">
-                <table cellpadding="0" cellspacing="0" border="0">
+                <table cellpadding="0" cellspacing="0" border="0" >
                     <thead>
                         <tr>
                             <th> Formation Continue / initiale : </th>
@@ -69,9 +89,30 @@
                     </table>
                 </div>
                 <div class="tbl-content">
-                    <p id="data-output"></p>
-                </div>
-    </section>
-</body> 
+                    <table cellpadding="0" cellspacing="0" border="0">
+                        <tbody>
+                                <?php
+                                for($i=0; $i<95;$i++){
+                                ?> 
+                                <tr>
+                                    <td><?php echo $data['features'][$i]['properties']["Formation_Continue_initiale"]; ?> </td>
+                                    <td><?php echo $data['features'][$i]['properties']["Type_organisme"]; ?> </td>
+                                    <td><?php echo $data['features'][$i]['properties']["NOM_de_l'organisme"]; ?> </td>
+                                    <td><?php echo $data['features'][$i]['properties']["Intitule_de_la_formation"]; ?> </td>
+                                    <td><?php echo $data['features'][$i]['properties']["Localisation_de_la_structure"]; ?> </td>
+                                    <td><?php echo $data['features'][$i]['properties']["Duree_de_la_formation"]; ?> </td>
+                                    <td><?php echo $data['features'][$i]['properties']["Modalites"]; ?> </td>
+                                    <td><button type="submit" onclick="addPanier(<?php echo $i;?>)">Ajouter au panier</button></td>
+                                </tr>
+                                <?php
+                                }
+                                ?>
+                        </tbody>
 
+
+                    </table>
+                </div>
+        </section>
+
+</body>   
 </html>
