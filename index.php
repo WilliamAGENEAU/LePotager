@@ -9,7 +9,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="D4G">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+     integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+     crossorigin=""/>
     <script src="main.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+     integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
+     crossorigin=""></script>
 </head>
 
 <nav role='navigation'>
@@ -38,14 +44,15 @@
     </ul>
   </div>
 </nav>
-<body>
+<body  onload="init()">
+
 	<div class="titre">
 	<img src="images\DESIGN4GREEN_logo_vecto_Blanc.png" width="40%" weight="40%">
 	</div>
 	<h1> Formations Green IT / Eco-Design / Eco-Conception</h1>
-	<div id='carte'>
-		<iframe src="https://api.jawg.io/maps/c111bdcc-60ac-4d6b-9713-81ca5d705f0e/b0b3057a-7554-4d39-b93a-af8b7a11184f.html?access-token=mSx8rWaBLl4TKFIAND6r9V8or0NfCPwyPr5QgPVCt4lLcHCAmxzZbawvhGuq9yMD" width="1200px" height="800px"></iframe>
-	</div>
+
+
+	<div id="map"></div>
 
 	<input type="text" id="myInput" onkeyup="recherche()" placeholder="Recherche formations ..." title="Rechercher">
 
@@ -67,7 +74,7 @@
                             <th> Localisation de la structure (ville) : </th>
                             <th> Durée de la formation / intervention (en j) : </th>
                             <th> Modalités d’accès à la formation (présentiel / distanciel / hybride) : </th>
-                            
+                            <th> Panier : </th>
                         </tr>
                     </thead>
                 </table>
@@ -93,12 +100,6 @@
                             ?>
                     </tbody>
 
-                    
-                    <!--<tbody id='data-output'>
-
-
-
-                    </tbody>-->
 
 
                 </table>
@@ -121,29 +122,36 @@
         a.print();
     }
 
-	
 	function recherche() {
-	var input, filter, table, tr, td, i, txtValue;
-	input = document.getElementById("myInput");
-	filter = input.value.toUpperCase();
-	table = document.getElementById("myTable");
-	tr = table.getElementsByTagName("tr");
-	for (i = 0; i < tr.length; i++) {
-		td = tr[i].getElementsByTagName("td")[0];
-		if (td) {
-		txtValue = td.textContent || td.innerText;
-		if (txtValue.toUpperCase().indexOf(filter) > -1) {
-			tr[i].style.display = "";
-		} else {
-			tr[i].style.display = "none";
-		}
-		}       
+	var input, filter, found, table, tr, td, i, j;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td");
+        for (j = 0; j < td.length; j++) {
+            if (td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                found = true;
+            }
+        }
+        if (found) {
+            tr[i].style.display = "";
+            found = false;
+        } else {
+            tr[i].style.display = "none";
+        }
+    }
 	}
-	}
+
+
+
+
+	/*
 	function addPanier(){
         for(int i = 0; i<3; i++){
             
         }
-    }
+    }*/
 </script>
 </html>
