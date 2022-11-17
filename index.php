@@ -89,28 +89,7 @@
                     </table>
                 </div>
                 <div class="tbl-content">
-                    <table cellpadding="0" cellspacing="0" border="0">
-                        <tbody>
-                                <?php
-                                for($i=0; $i<95;$i++){
-                                ?> 
-                                <tr>
-                                    <td><?php echo $data['features'][$i]['properties']["Formation_Continue_initiale"]; ?> </td>
-                                    <td><?php echo $data['features'][$i]['properties']["Type_organisme"]; ?> </td>
-                                    <td><?php echo $data['features'][$i]['properties']["NOM_de_l'organisme"]; ?> </td>
-                                    <td><?php echo $data['features'][$i]['properties']["Intitule_de_la_formation"]; ?> </td>
-                                    <td><?php echo $data['features'][$i]['properties']["Localisation_de_la_structure"]; ?> </td>
-                                    <td><?php echo $data['features'][$i]['properties']["Duree_de_la_formation"]; ?> </td>
-                                    <td><?php echo $data['features'][$i]['properties']["Modalites"]; ?> </td>
-                                    <td><button type="submit" onclick="addPanier(<?php echo $i;?>)">Ajouter au panier</button></td>
-                                </tr>
-                                <?php
-                                }
-                                ?>
-                        </tbody>
-
-
-                    </table>
+                    <p id="data-output"></p>
                 </div>
         </section>
 
