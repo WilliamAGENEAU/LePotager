@@ -163,6 +163,8 @@ button:hover {
     color: #121522;
     transition: 0.2s;
     border: 5px #121522;
+    cursor: pointer;
+
 }
 input[type=email] {
     width: 300px;
@@ -234,8 +236,6 @@ body{
 section{
   margin: 50px;
 }
-
-
 
 nav {
   position: fixed;
