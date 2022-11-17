@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="main.js"></script>
 </head>
-
+<body>
 <nav role='navigation'>
   <div id="menuToggle">
     <input type="checkbox" />
@@ -26,7 +26,7 @@
 		</div>
 	  <div id="outer">
   		<div class="inner">
-		  <button type="submit" onclick="printDiv()"><i ></i> Print</button>
+		  <button type="submit" onclick="printDiv()"><i></i>Print</button>
 	  </div>
 	  <div class="inner">
 	  <form action="https://formspree.io/f/mwkzywdl" method="POST"><br>
@@ -38,7 +38,7 @@
     </ul>
   </div>
 </nav>
-<body>
+
     <?php
     $panier = array();
     $panier = array_fill(0, 3, null);
@@ -107,15 +107,14 @@
         var divContents = document.getElementById("panier").innerHTML;
         var a = window.open('', '', 'height=800, width=800');
         a.document.write('<html>');
-        a.document.write(
-            '<head><link rel="stylesheet" href="./../css/style.css" type="text/css"><link rel="stylesheet" href="./../utils/lib/bootstrap.min.css" /></head>'
-        );
         a.document.write('<body>');
         a.document.write(divContents);
         a.document.write('</body></html>');
         a.document.close();
         a.print();
     }
+</script>
+<script>
 
     function addPanier(){
         for(int i = 0; i<3; i++){
