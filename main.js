@@ -1,19 +1,33 @@
+function init() {
+    var map = L.map('map').setView([48.856614, 2.352221], 5);
+
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+    
+    Object.entries(json).forEach(objet => {
+        var marker = L.marker([objet[1].Longitude,objet[1].Latitude]).addTo(map);
+        marker.bindPopup(objet[1].NOM);
+    })
+}
+
 var panier = [];
 
 var json = []
 
-fetch("utils/Fichier_csv.json")
+fetch("utils/data.geojson")
                 .then(response => response.json())
                 .then(data =>{
                     let text = "<table cellpadding='0' cellspacing='0' border='0'>"
                     text += "<tbody>";
-                    for(var r=0;r<data.length;r++)
+                    for(var r=0;r<data.features.length;r++)
                         {
-                            text += "<tr><td>" + data[r].Formation_Continue_initiale + "</td><td>" 
-                            + data[r].Type_organisme + "</td><td>"+ data[r].NOM + "</td><td>"+ data[r].Intitule_de_la_formation + 
-                            "</td><td>"+ data[r].Localisation_de_la_structure + "</td><td>"+ data[r].Duree_de_la_formation +
-                            "</td><td>"+ data[r].Modalites + "</td><td><button onclick='addPanier("+r+")'>Ajouter au panier</button></td></tr>"; 
-                            json.push(data[r]);
+                            text += "<tr><td>" + data.features[r].properties["Formation_Continue_initiale"] + "</td><td>" 
+                            + data.features[r].properties["Type_organisme"] + "</td><td>"+ data.features[r].properties["NOM_de_l'organisme"] + "</td><td>"+ data.features[r].properties["Intitule_de_la_formation"] + 
+                            "</td><td>"+ data.features[r].properties["Localisation_de_la_structure"] + "</td><td>"+ data.features[r].properties["Duree_de_la_formation"] +
+                            "</td><td>"+ data.features[r].properties["Modalites"] + "</td><td><button onclick='addPanier("+r+")'>Ajouter au panier</button></td></tr>"; 
+                            json.push(data.features[r].properties);
                         }
                         text += "</tbody>"
                         text += "</table>"
@@ -38,11 +52,7 @@ function printDiv() {
 
 function addPanier(r){
     if(panier.length<3){
-        panier.push(json[r]);
+        panier.push(myjson[r]);
     }
     console.log(panier);
-}
-
-function afficherPanier(){
-    
 }
