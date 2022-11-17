@@ -13,32 +13,37 @@
 </head>
 
 <nav role='navigation'>
-  <div id="menuToggle">
-    <input type="checkbox" />
-    <span></span>
-    <span></span>
-    <span></span>
-    <ul id="menu">
-		<div id="panier">
-    		<li>-----</li>
-      		<li>-----</li>
-      		<li>-----</li>
-		</div>
-	  <div id="outer">
-  		<div class="inner">
-		  <button type="submit" onclick="printDiv()"><i ></i> Print</button>
-	  </div>
-	  <div class="inner">
-	  <form action="https://formspree.io/f/mwkzywdl" method="POST"><br>
-                <input type="email" name="_replyto" placeholder="Email"><br>
-                <button type="submit">Devis</button>
-            </form>
-	  </div>
-	  </div>
-    </ul>
-  </div>
+            <ul>
+                <div class="fadeindown" style="animation-delay: 0.3s;" id="menuToggle">
+                        <input type="checkbox" />
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <ul id="menu">
+                            <div id="panier">
+                                <li>-----</li>
+                                <li>-----</li>
+                                <li>-----</li>
+                            </div>
+                        <div id="outer">
+                            <div class="inner">
+                            <button type="submit" onclick="printDiv()"><i ></i> Print</button>
+                        </div>
+                        <div class="inner">
+                        <form action="https://formspree.io/f/mwkzywdl" method="POST"><br>
+                                    <input type="email" name="_replyto" placeholder="Email"><br>
+                                    <button type="submit">Devis</button>
+                                </form>
+                        </div>
+                        </div>
+                        </ul>
+                </div>
+            </li>
+        </ul>
+  
 </nav>
 <body>
+    <section id="carte">
     <?php
     $panier = array();
     $panier = array_fill(0, 3, null);
@@ -51,7 +56,8 @@
 	<div id='carte'>
 		<iframe src="https://api.jawg.io/maps/c111bdcc-60ac-4d6b-9713-81ca5d705f0e/b0b3057a-7554-4d39-b93a-af8b7a11184f.html?access-token=mSx8rWaBLl4TKFIAND6r9V8or0NfCPwyPr5QgPVCt4lLcHCAmxzZbawvhGuq9yMD" width="1200px" height="800px"></iframe>
 	</div>
-	<section>
+    </section>
+	<section id="liste">
             <?php
                 $data = file_get_contents("utils/data.geojson");  
                 $data = json_decode($data, true);
