@@ -222,6 +222,16 @@ td{
   border-bottom: solid 1px rgba(255,255,255,0.1);
 }
 
+#myInput {
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 50%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+  
+}
 
 /* demo styles */
 
