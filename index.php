@@ -1502,8 +1502,8 @@
                 </div>
         </section>
 
-	<div id="map"></div>
-  <div></div>
+	
+  
   <!-- Trigger/Open The Modal -->
 <button id="myBtn"><P>Panier</P></button>
 
