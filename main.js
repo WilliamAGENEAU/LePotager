@@ -35,11 +35,11 @@ fetch("utils/Fichier_csv.json")
                 })
 
 function printDiv() {
-    var divContents = document.getElementById("panier").innerHTML;
+    var divContents = document.getElementById("list").innerHTML;
     var a = window.open('', '', 'height=800, width=800');
     a.document.write('<html>');
     a.document.write(
-        '<head><link rel="stylesheet" href="./../css/style.css" type="text/css"><link rel="stylesheet" href="./../utils/lib/bootstrap.min.css" /></head>'
+        '<head><link rel="stylesheet" href="css/style.css"></head>'
     );
     a.document.write('<body>');
     a.document.write('<h1>Devis</h1>');
@@ -59,14 +59,7 @@ function addPanier(r){
     console.log(panier);
 }
 
-function afficherPanier(){
-    let text = "";
-    for(var i = 0; i<panier.length; i++){
-        text += "<li>"+ panier[i] +"</li>";
-    }
-    document.getElementById("panier").innerHTML = text;
-}
-
-function supprPanier(r){
-
+function supprPanier(){
+    panier = [];
+    console.log(panier);
 }
