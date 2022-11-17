@@ -1490,10 +1490,12 @@
 	</div>
 	<h1> Formations Green IT / Eco-Design / Eco-Conception</h1>
 
-
+	<div id='findbox'></div>
 	<div id="map"></div>
 
     </section>
+
+	
 	<section id="liste">
 
 	<input type="text" id="myInput" onkeyup="recherche()" placeholder="Recherche formations ..." title="Rechercher">
