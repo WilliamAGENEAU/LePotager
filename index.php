@@ -1516,7 +1516,7 @@
                 </td>
             </tr>
             </br>
-            <button type="button" onclick="supprPanier()">Vider le panier</button>
+            <button type="button" onclick="supprPanier()">Vider le panier</button>  
             </br>  
             <button type="button" class="btn cancel" onclick="closePanier()">Close</button>
         </div>    
