@@ -1515,7 +1515,7 @@
                 <td><button type="submit" onclick="printDiv()"><i ></i> Print</button></td>
                 <td><form action="mailto:LePotager?subject=Demande de devis" name="envoi" method=POST enctype="text/plain">
                 </br>
-                <input type="email" name="Bonjour bg" placeholder="Email"><br><br>
+                <label style='color:black;'>Email : <input type="email" name="Bonjour bg" placeholder="Email" ></label><br><br>
                 <button type="submit">Devis</button>
                 </form>
                 </td>
@@ -1527,7 +1527,6 @@
         </div>    
     </div>
 <script>
-	/*Ca marche plus*/
 	function recherche() {
         var input, filter, found, table, tr, td, i, j;
         input = document.getElementById("myInput");

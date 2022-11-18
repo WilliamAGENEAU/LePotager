@@ -139,6 +139,7 @@ L.Control.Search = L.Control.extend({
 		this._cancel = this._createCancel(this.options.textCancel, 'search-cancel');
 		this._button = this._createButton(this.options.textPlaceholder, 'search-button');
 		this._alert = this._createAlert('search-alert');
+		
 
 		if(this.options.collapsed===false)
 			this.expand(this.options.collapsed);
@@ -308,7 +309,7 @@ L.Control.Search = L.Control.extend({
 		
 		label.htmlFor = input.id;
 		label.style.display = 'none';
-		label.value = text;
+		label.value = "Recherche";
 
 		L.DomEvent
 			.disableClickPropagation(input)
