@@ -1513,11 +1513,7 @@
             <p id='list'></p>
             <tr>
                 <td><button type="submit" onclick="printDiv()"><i ></i> Print</button></td>
-                <td><form action="mailto:LePotager?subject=Demande de devis" name="envoi" method=POST enctype="text/plain">
-                </br>
-                <label style='color:black;'>Email : <input type="email" name="Bonjour bg" placeholder="Email" ></label><br><br>
-                <button type="submit">Devis</button>
-                </form>
+                <td><a href="mailto:information@lesite.com?subject=Demande de devis&amp;body=Bonjour, %0aJe souhaite un devis pour votre formation. %0aCordialement">Devis</a>
                 </td>
             </tr>
             </br>
