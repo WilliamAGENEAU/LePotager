@@ -1465,7 +1465,7 @@
 <body onload="init()">
 <script src="main.js"></script>
 	<div class="titre">
-	<img src="images\DESIGN4GREEN_logo_vecto_Blanc.png" width="40%" weight="40%" alt="D4G_logo">
+	<img src="images\DESIGN4GREEN_logo_vecto_Blanc.png" alt="D4G_logo" style='width: 40%; height: 40%;'>
 	</div>
 	<h1> Formations Green IT / Eco-Design / Eco-Conception</h1>
 
